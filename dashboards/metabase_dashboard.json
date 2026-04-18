@@ -1,0 +1,9 @@
+{
+  "name": "Portfolio KPIs",
+  "description": "Placeholder export for Metabase dashboard showing approval rate, delinquency and ticket metrics.",
+  "cards": [
+    {"name": "Approval Rate by Month", "query_file": "dashboards/kpis.sql"},
+    {"name": "Delinquency Rate", "query_file": "dashboards/kpis.sql"},
+    {"name": "Avg Ticket by Product", "query_file": "dashboards/kpis.sql"}
+  ]
+}

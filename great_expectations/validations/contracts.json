@@ -1,0 +1,12 @@
+{
+  "table": "contracts",
+  "results": [
+    {
+      "expectation": "expect_column_values_to_not_be_null",
+      "success": true,
+      "details": {
+        "null_count": 0
+      }
+    }
+  ]
+}

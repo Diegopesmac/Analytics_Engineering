@@ -1,0 +1,44 @@
+version: 2
+
+sources:
+  - name: raw
+    tables:
+      - name: customers
+      - name: products
+      - name: proposals
+      - name: contracts
+      - name: payments
+      - name: transactions
+
+models:
+  - name: stg_customers
+    description: "Staging for customers"
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_proposals
+    columns:
+      - name: proposal_id
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        tests:
+          - not_null
+  - name: stg_contracts
+    columns:
+      - name: contract_id
+        tests:
+          - not_null
+          - unique
+      - name: proposal_id
+        tests:
+          - not_null
+  - name: fact_payments
+    columns:
+      - name: payment_id
+        tests:
+          - not_null
+          - unique

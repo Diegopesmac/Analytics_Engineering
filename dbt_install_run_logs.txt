@@ -1,0 +1,149 @@
+
+>>> CMD: python -m pip install --user dbt-core dbt-duckdb
+CWD: c:\Users\diego\OneDrive\Documentos\Projetos\Analytics_Engineering
+
+--- STDOUT ---
+Collecting dbt-core
+  Using cached dbt_core-1.11.8-py3-none-any.whl.metadata (4.4 kB)
+Collecting dbt-duckdb
+  Using cached dbt_duckdb-1.10.1-py3-none-any.whl.metadata (38 kB)
+Collecting agate<1.10,>=1.7.0 (from dbt-core)
+  Using cached agate-1.9.1-py2.py3-none-any.whl.metadata (3.2 kB)
+Requirement already satisfied: click<9.0,>=8.3.0 in C:\Python311\Lib\site-packages (from dbt-core) (8.3.2)
+Requirement already satisfied: daff>=1.3.46 in C:\Python311\Lib\site-packages (from dbt-core) (1.4.2)
+Collecting dbt-adapters<2.0,>=1.15.5 (from dbt-core)
+  Using cached dbt_adapters-1.22.10-py3-none-any.whl.metadata (4.5 kB)
+Collecting dbt-common<2.0,>=1.37.3 (from dbt-core)
+  Using cached dbt_common-1.37.3-py3-none-any.whl.metadata (4.9 kB)
+Collecting dbt-extractor<=0.6,>=0.5.0 (from dbt-core)
+  Using cached dbt_extractor-0.6.0-cp39-abi3-win_amd64.whl.metadata (4.6 kB)
+Collecting dbt-protos<2.0,>=1.0.405 (from dbt-core)
+  Using cached dbt_protos-1.0.443-py3-none-any.whl.metadata (859 bytes)
+Collecting dbt-semantic-interfaces<0.10,>=0.9.0 (from dbt-core)
+  Using cached dbt_semantic_interfaces-0.9.0-py3-none-any.whl.metadata (2.6 kB)
+Requirement already satisfied: jinja2<4,>=3.1.3 in C:\Users\diego\AppData\Roaming\Python\Python311\site-packages (from dbt-core) (3.1.6)
+Requirement already satisfied: jsonschema<5.0,>=4.19.1 in C:\Users\diego\AppData\Roaming\Python\Python311\site-packages (from dbt-core) (4.26.0)
+Collecting mashumaro<3.15,>=3.9 (from mashumaro[msgpack]<3.15,>=3.9->dbt-core)
+  Using cached mashumaro-3.14-py3-none-any.whl.metadata (114 kB)
+Requirement already satisfied: networkx<4.0,>=2.3 in C:\Users\diego\AppData\Roaming\Python\Python311\site-packages (from dbt-core) (3.5)
+Requirement already satisfied: packaging>20.9 in C:\Python311\Lib\site-packages (from dbt-core) (24.2)
+Collecting pathspec<0.13,>=0.9 (from dbt-core)
+  Using cached pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+Collecting protobuf<7.0,>=6.0 (from dbt-core)
+  Using cached protobuf-6.33.6-cp310-abi3-win_amd64.whl.metadata (593 bytes)
+Requirement already satisfied: pydantic<3 in C:\Users\diego\AppData\Roaming\Python\Python311\site-packages (from dbt-core) (2.13.2)
+Requirement already satisfied: pytz>=2015.7 in C:\Python311\Lib\site-packages (from dbt-core) (2024.2)
+Collecting pyyaml>=6.0 (from dbt-core)
+  Using cached pyyaml-6.0.3-cp311-cp311-win_amd64.whl.metadata (2.4 kB)
+Requirement already satisfied: requests<3.0.0 in C:\Users\diego\AppData\Roaming\Python\Python311\site-packages (from dbt-core) (2.32.4)
+Collecting snowplow-tracker<2.0,>=1.0.2 (from dbt-core)
+  Using cached snowplow_tracker-1.1.0-py3-none-any.whl.metadata (5.7 kB)
+Collecting sqlparse<0.6.0,>=0.5.5 (from dbt-core)
+  Using cached sqlparse-0.5.5-py3-none-any.whl.metadata (4.7 kB)
+Requirement already satisfied: typing-extensions>=4.4 in C:\Python311\Lib\site-packages (from dbt-core) (4.14.1)
+Collecting Babel>=2.0 (from agate<1.10,>=1.7.0->dbt-core)
+  Using cached babel-2.18.0-py3-none-any.whl.metadata (2.2 kB)
+Collecting isodate>=0.5.4 (from agate<1.10,>=1.7.0->dbt-core)
+  Using cached isodate-0.7.2-py3-none-any.whl.metadata (11 kB)
+Requirement already satisfied: leather>=0.3.2 in C:\Python311\Lib\site-packages (from agate<1.10,>=1.7.0->dbt-core) (0.4.1)
+Requirement already satisfied: parsedatetime!=2.5,>=2.1 in C:\Python311\Lib\site-packages (from agate<1.10,>=1.7.0->dbt-core) (2.6)
+Collecting python-slugify>=1.2.1 (from agate<1.10,>=1.7.0->dbt-core)
+  Using cached python_slugify-8.0.4-py2.py3-none-any.whl.metadata (8.5 kB)
+Requirement already satisfied: pytimeparse>=1.1.5 in C:\Python311\Lib\site-packages (from agate<1.10,>=1.7.0->dbt-core) (1.1.8)
+Requirement already satisfied: tzdata>=2023.3 in C:\Python311\Lib\site-packages (from agate<1.10,>=1.7.0->dbt-core) (2024.2)
+Requirement already satisfied: colorama in C:\Users\diego\AppData\Roaming\Python\Python311\site-packages (from click<9.0,>=8.3.0->dbt-core) (0.4.6)
+Collecting deepdiff<9.0,>=7.0 (from dbt-common<2.0,>=1.37.3->dbt-core)
+  Using cached deepdiff-8.6.2-py3-none-any.whl.metadata (8.8 kB)
+Requirement already satisfied: python-dateutil<3.0,>=2.0 in C:\Python311\Lib\site-packages (from dbt-common<2.0,>=1.37.3->dbt-core) (2.9.0.post0)
+Collecting importlib-metadata<9,>=6.0 (from dbt-semantic-interfaces<0.10,>=0.9.0->dbt-core)
+  Using cached importlib_metadata-8.9.0-py3-none-any.whl.metadata (4.5 kB)
+Requirement already satisfied: more-itertools<11.0,>=8.0 in C:\Users\diego\AppData\Roaming\Python\Python311\site-packages (from dbt-semantic-interfaces<0.10,>=0.9.0->dbt-core) (10.7.0)
+Collecting orderly-set<6,>=5.4.1 (from deepdiff<9.0,>=7.0->dbt-common<2.0,>=1.37.3->dbt-core)
+  Using cached orderly_set-5.5.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting zipp>=3.20 (from importlib-metadata<9,>=6.0->dbt-semantic-interfaces<0.10,>=0.9.0->dbt-core)
+  Using cached zipp-3.23.1-py3-none-any.whl.metadata (3.6 kB)
+Requirement already satisfied: MarkupSafe>=2.0 in C:\Users\diego\AppData\Roaming\Python\Python311\site-packages (from jinja2<4,>=3.1.3->dbt-core) (3.0.2)
+Requirement already satisfied: attrs>=22.2.0 in C:\Python311\Lib\site-packages (from jsonschema<5.0,>=4.19.1->dbt-core) (26.1.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in C:\Users\diego\AppData\Roaming\Python\Python311\site-packages (from jsonschema<5.0,>=4.19.1->dbt-core) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in C:\Python311\Lib\site-packages (from jsonschema<5.0,>=4.19.1->dbt-core) (0.37.0)
+Requirement already satisfied: rpds-py>=0.25.0 in C:\Python311\Lib\site-packages (from jsonschema<5.0,>=4.19.1->dbt-core) (0.30.0)
+Collecting msgpack>=0.5.6 (from mashumaro[msgpack]<3.15,>=3.9->dbt-core)
+  Using cached msgpack-1.1.2-cp311-cp311-win_amd64.whl.metadata (8.4 kB)
+Requirement already satisfied: annotated-types>=0.6.0 in C:\Users\diego\AppData\Roaming\Python\Python311\site-packages (from pydantic<3->dbt-core) (0.7.0)
+Requirement already satisfied: pydantic-core==2.46.2 in C:\Users\diego\AppData\Roaming\Python\Python311\site-packages (from pydantic<3->dbt-core) (2.46.2)
+Requirement already satisfied: typing-inspection>=0.4.2 in C:\Users\diego\AppData\Roaming\Python\Python311\site-packages (from pydantic<3->dbt-core) (0.4.2)
+Requirement already satisfied: six>=1.5 in C:\Python311\Lib\site-packages (from python-dateutil<3.0,>=2.0->dbt-common<2.0,>=1.37.3->dbt-core) (1.17.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in C:\Users\diego\AppData\Roaming\Python\Python311\site-packages (from requests<3.0.0->dbt-core) (3.4.2)
+Requirement already satisfied: idna<4,>=2.5 in C:\Users\diego\AppData\Roaming\Python\Python311\site-packages (from requests<3.0.0->dbt-core) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in C:\Python311\Lib\site-packages (from requests<3.0.0->dbt-core) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in C:\Users\diego\AppData\Roaming\Python\Python311\site-packages (from requests<3.0.0->dbt-core) (2025.7.14)
+Requirement already satisfied: duckdb>=1.0.0 in C:\Users\diego\AppData\Roaming\Python\Python311\site-packages (from dbt-duckdb) (1.5.2)
+Requirement already satisfied: text-unidecode>=1.3 in C:\Python311\Lib\site-packages (from python-slugify>=1.2.1->agate<1.10,>=1.7.0->dbt-core) (1.3)
+Using cached dbt_core-1.11.8-py3-none-any.whl (1.1 MB)
+Using cached agate-1.9.1-py2.py3-none-any.whl (95 kB)
+Using cached dbt_adapters-1.22.10-py3-none-any.whl (173 kB)
+Using cached dbt_common-1.37.3-py3-none-any.whl (87 kB)
+Using cached dbt_extractor-0.6.0-cp39-abi3-win_amd64.whl (277 kB)
+Using cached dbt_protos-1.0.443-py3-none-any.whl (186 kB)
+Using cached dbt_semantic_interfaces-0.9.0-py3-none-any.whl (147 kB)
+Using cached deepdiff-8.6.2-py3-none-any.whl (91 kB)
+Using cached importlib_metadata-8.9.0-py3-none-any.whl (27 kB)
+Using cached isodate-0.7.2-py3-none-any.whl (22 kB)
+Using cached mashumaro-3.14-py3-none-any.whl (92 kB)
+Using cached orderly_set-5.5.0-py3-none-any.whl (13 kB)
+Using cached pathspec-0.12.1-py3-none-any.whl (31 kB)
+Using cached protobuf-6.33.6-cp310-abi3-win_amd64.whl (437 kB)
+Using cached pyyaml-6.0.3-cp311-cp311-win_amd64.whl (158 kB)
+Using cached snowplow_tracker-1.1.0-py3-none-any.whl (44 kB)
+Using cached sqlparse-0.5.5-py3-none-any.whl (46 kB)
+Using cached dbt_duckdb-1.10.1-py3-none-any.whl (85 kB)
+Using cached babel-2.18.0-py3-none-any.whl (10.2 MB)
+Using cached msgpack-1.1.2-cp311-cp311-win_amd64.whl (71 kB)
+Using cached python_slugify-8.0.4-py2.py3-none-any.whl (10 kB)
+Using cached zipp-3.23.1-py3-none-any.whl (10 kB)
+Installing collected packages: zipp, sqlparse, pyyaml, python-slugify, protobuf, pathspec, orderly-set, msgpack, mashumaro, isodate, dbt-extractor, Babel, snowplow-tracker, importlib-metadata, deepdiff, dbt-protos, agate, dbt-semantic-interfaces, dbt-common, dbt-adapters, dbt-core, dbt-duckdb
+
+Successfully installed Babel-2.18.0 agate-1.9.1 dbt-adapters-1.22.10 dbt-common-1.37.3 dbt-core-1.11.8 dbt-duckdb-1.10.1 dbt-extractor-0.6.0 dbt-protos-1.0.443 dbt-semantic-interfaces-0.9.0 deepdiff-8.6.2 importlib-metadata-8.9.0 isodate-0.7.2 mashumaro-3.14 msgpack-1.1.2 orderly-set-5.5.0 pathspec-0.12.1 protobuf-6.33.6 python-slugify-8.0.4 pyyaml-6.0.3 snowplow-tracker-1.1.0 sqlparse-0.5.5 zipp-3.23.1
+
+--- STDERR ---
+WARNING: Ignoring invalid distribution ~ip (C:\Python311\Lib\site-packages)
+WARNING: Ignoring invalid distribution ~ip (C:\Python311\Lib\site-packages)
+  WARNING: The script sqlformat.exe is installed in 'C:\Users\diego\AppData\Roaming\Python\Python311\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script slugify.exe is installed in 'C:\Users\diego\AppData\Roaming\Python\Python311\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script pybabel.exe is installed in 'C:\Users\diego\AppData\Roaming\Python\Python311\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script deep.exe is installed in 'C:\Users\diego\AppData\Roaming\Python\Python311\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script dbt.exe is installed in 'C:\Users\diego\AppData\Roaming\Python\Python311\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+
+EXIT CODE: 0
+
+
+>>> CMD: python -m dbt --version
+CWD: c:\Users\diego\OneDrive\Documentos\Projetos\Analytics_Engineering
+
+--- STDOUT ---
+
+
+--- STDERR ---
+C:\Python311\python.exe: No module named dbt.__main__; 'dbt' is a package and cannot be directly executed
+
+EXIT CODE: 1
+
+
+>>> CMD: dbt --version
+CWD: c:\Users\diego\OneDrive\Documentos\Projetos\Analytics_Engineering
+
+--- STDOUT ---
+
+
+--- STDERR ---
+'dbt' nÆo ‚ reconhecido como um comando interno
+ou externo, um programa oper vel ou um arquivo em lotes.
+
+EXIT CODE: 1
+
+dbt not available; installation likely failed or PATH not set.

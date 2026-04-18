@@ -1,0 +1,11 @@
+{
+  "expectation_suite_name": "raw.contracts.suite",
+  "expectations": [
+    {
+      "expectation_type": "expect_column_to_exist",
+      "kwargs": {
+        "column": "contract_id"
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+version: '3.7'
+services:
+  dbt-runner:
+    build: ./docker
+    image: analytics-portfolio-dbt-runner:latest
+    volumes:
+      - ./data:/data
+      - ./:/workspace
+    working_dir: /workspace
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  airflow:
+    image: apache/airflow:2.6.3
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+    volumes:
+      - ./airflow:/opt/airflow
+      - ./data:/data
+      - ./:/workspace
+    ports:
+      - "8080:8080"
+    command: webserver
+
+  metabase:
+    image: metabase/metabase:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./metabase-data:/metabase-data
+    environment:
+      - MB_DB_FILE=/metabase-data/metabase.db
+
+volumes:
+  metabase-data: {}

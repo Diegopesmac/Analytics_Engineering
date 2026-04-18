@@ -1,0 +1,12 @@
+default:
+  outputs:
+    dev:
+      type: duckdb
+      # path is relative to the dbt project directory; use parent path to the project's data folder
+      path: ../data/warehouse.duckdb
+      threads: 1
+      schema: marts
+  target: dev
+
+# Copy this file to `profiles.yml` and adjust values for your environment.
+# Keep `profiles.yml` out of source control (added to .gitignore).

@@ -1,0 +1,42 @@
+.venv/
+.venv/*
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+.venv/*
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment variables
+.env
+
+# DuckDB local warehouse
+data/warehouse.duckdb
+
+# IDE / Editor directories
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Logs and runtime
+*.log
+pipeline_run_logs.txt
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Temporary files
+*.tmp
+*.swp
+
+# dbt user profile (may contain local paths / credentials)
+dbt/profiles.yml

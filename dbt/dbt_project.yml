@@ -1,0 +1,9 @@
+name: analytics_portfolio
+version: '1.0'
+config-version: 2
+profile: default
+# `source-paths` was renamed to `model-paths` in newer dbt versions.
+# Use `model-paths` to avoid deprecation warnings.
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target"]

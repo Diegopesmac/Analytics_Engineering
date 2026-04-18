@@ -1,0 +1,11 @@
+{
+  "expectation_suite_name": "raw.payments.suite",
+  "expectations": [
+    {
+      "expectation_type": "expect_column_to_exist",
+      "kwargs": {
+        "column": "payment_id"
+      }
+    }
+  ]
+}

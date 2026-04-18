@@ -1,0 +1,6 @@
+pandas==2.2.3
+# Use a recent DuckDB release compatible with dbt-duckdb and local installs
+duckdb>=1.5.2
+# Pin Great Expectations to a broadly available release
+great_expectations>=1.16.1
+# dbt is installed separately in CI or developer env as needed
