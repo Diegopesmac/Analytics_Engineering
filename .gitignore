@@ -40,3 +40,6 @@ dist/
 
 # dbt user profile (may contain local paths / credentials)
 dbt/profiles.yml
+# dbt compiled artifacts
+dbt/target/
+dbt/target/*
